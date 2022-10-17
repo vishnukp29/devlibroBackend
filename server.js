@@ -35,7 +35,9 @@ app.use('/api/category', categoryRoute);
 // Error Handler
 app.use(notFound)
 app.use(errorHandler)
-
+app.get('/',(req,res)=>{
+    res.send("DEVLIBRO API WORKING")
+})
 
 const PORT=process.env.PORT || 5000
 app.listen(PORT, console.log(`Server is Running ${PORT}`))
